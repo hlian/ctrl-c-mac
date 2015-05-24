@@ -31,7 +31,6 @@ class MenuBarController: NSObject {
     override init() {
         super.init()
 
-        let rect = statusItem.button!.window!.convertRectToScreen(statusItem.button!.convertRect(statusItem.button!.bounds, toView: nil))
         statusItem.button!.title = NSLocalizedString("^C", comment: "");
         statusItem.button!.rac_command = RACCommand(signalBlock: {
             [unowned self] (x) -> RACSignal! in
